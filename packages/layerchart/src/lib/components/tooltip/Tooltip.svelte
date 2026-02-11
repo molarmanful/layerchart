@@ -359,8 +359,7 @@
     {...props.root}
     class={cls('lc-tooltip-root', classes.root, props.root?.class)}
     class:disablePointerEvents={pointerEvents === false}
-    style:top="{motionY.current}px"
-    style:left="{motionX.current}px"
+    style:transform="translate({motionX.current}px, {motionY.current}px)"
     transition:fade={{ duration: 100 }}
     bind:clientWidth={tooltipWidth}
     bind:clientHeight={tooltipHeight}
